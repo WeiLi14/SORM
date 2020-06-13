@@ -33,7 +33,7 @@ public interface Query {
      * @param clazz
      * @param id
      */
-    public void delete(Class clazz, int id);
+    public void delete(Class clazz, Object id);
 
     /**
      * 直接通过对象删除

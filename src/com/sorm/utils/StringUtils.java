@@ -10,4 +10,14 @@ package com.sorm.utils;
  * @Version: 1.0
  */
 public class StringUtils {
+
+    /**
+     * 将首字母大写
+     * @param str
+     * @return
+     */
+    public static String fristChar2UpperCase(String str){
+        // abcd-->Abcd
+       return str.toUpperCase().substring(0,1)+str.substring(1);
+    }
 }
