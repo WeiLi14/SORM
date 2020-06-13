@@ -25,7 +25,7 @@ public class MysqlQuery implements Query {
     //测试 是否够删除
     public static void main(String[] args) {
         T_user t_user = new T_user();
-        t_user.setId(2);
+        t_user.setId(3);
         //调用通用方法
         Query query = new MysqlQuery();
         query.delete(t_user);
