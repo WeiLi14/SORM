@@ -24,8 +24,8 @@ public interface Query {
 
     /**
      * 将一个对象直接存储到数据库中
-     *
-     * @param obj
+     *把对象中不为null的属性往数据库中存储！如果数字为null则放0
+     * @param obj 要存储的对象
      */
     public void insert(Object obj);
 

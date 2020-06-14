@@ -33,4 +33,25 @@ public class ReflectUtils {
         return priKeyValue;
 
     }
+
+
+    public static void invokeSet(String fieldName,Object obj,Object args){
+        Method m = null;
+        Class clazz=obj.getClass();
+        Object priKeyValue =null;
+        try {
+            m = clazz.getMethod("set"+ StringUtils.fristChar2UpperCase(fieldName),args.getClass());
+            priKeyValue = m.invoke(obj,args);
+            // 我们再次调用上个方法。
+
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }

@@ -177,7 +177,7 @@ public class JAVAFileUtils {
         //JAVAFileUtils.createJavaPOFile(tableInfo, new MySqlTypeConvertor());
         // 创建数据库的表
         MySqlTypeConvertor mySqlTypeConvertor = new MySqlTypeConvertor();
-
+  //生成两张表的映射文件
         for(TableInfo t :tables.values()){
             createJavaPOFile(t,mySqlTypeConvertor);
         }
